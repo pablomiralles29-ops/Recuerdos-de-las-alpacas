@@ -10,59 +10,177 @@
 body{margin:0;background:#120d10;color:#fff;font-family:Montserrat,sans-serif;font-weight:300}
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;position:relative;overflow:hidden;background:linear-gradient(rgba(10,7,9,.30),rgba(10,7,9,.88)),url("Alpacas/Foto1.jpg") center/cover fixed}
 .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,transparent 0,rgba(0,0,0,.72) 100%)}
-.content{position:relative;z-index:2;max-width:900px}.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;opacity:.8;margin-bottom:20px}
+.content{position:relative;z-index:2;max-width:900px}
+.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;opacity:.8;margin-bottom:20px}
 h1{font-family:"Cormorant Garamond",serif;font-size:clamp(50px,10vw,100px);line-height:.9;font-weight:500;margin:0 0 20px}
-.subtitle{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,4vw,42px);line-height:1.15}.love{font-family:"Cormorant Garamond",serif;font-size:42px;color:#f4a9bd;margin-top:35px}
+.subtitle{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,4vw,42px);line-height:1.15}
+.love{font-family:"Cormorant Garamond",serif;font-size:42px;color:#f4a9bd;margin-top:35px}
+.date{margin-top:16px;font-size:14px;letter-spacing:1px;color:rgba(255,255,255,.78)}
+.time-together{margin-top:7px;font-size:13px;color:rgba(255,255,255,.58)}
 button{border:1px solid rgba(255,255,255,.45);background:rgba(244,169,189,.18);color:white;padding:14px 28px;border-radius:40px;font:inherit;cursor:pointer;backdrop-filter:blur(8px);transition:.3s;margin-top:25px}
 button:hover{background:rgba(244,169,189,.35);transform:translateY(-2px)}
-section{max-width:1100px;margin:auto;padding:90px 24px}.intro{text-align:center}
+section{max-width:1100px;margin:auto;padding:90px 24px}
+.intro{text-align:center}
 .intro h2,.gallery-title{font-family:"Cormorant Garamond",serif;font-size:48px;font-weight:500;color:#f4c4d0;margin:0 0 15px}
 .intro p{max-width:650px;margin:auto;line-height:1.9;color:#ddd}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:45px}
-.card{overflow:hidden;border-radius:18px;background:#24181d;border:1px solid rgba(244,196,208,.15);cursor:pointer}.card img{display:block;width:100%;height:360px;object-fit:cover;transition:.6s}.card:hover img{transform:scale(1.04)}
-.final{text-align:center;padding-bottom:120px}.final p{font-family:"Cormorant Garamond",serif;font-size:34px;color:#f4c4d0}.heart{font-size:45px}
+.card{overflow:hidden;border-radius:18px;background:#24181d;border:1px solid rgba(244,196,208,.15);cursor:pointer}
+.card img{display:block;width:100%;height:360px;object-fit:cover;transition:.6s}
+.card:hover img{transform:scale(1.04)}
+.final{text-align:center;padding-bottom:120px}
+.final p{font-family:"Cormorant Garamond",serif;font-size:34px;color:#f4c4d0}
+.heart{font-size:45px}
 .music{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:20;width:min(92%,520px);padding:12px 16px;border-radius:18px;background:rgba(20,15,18,.90);border:1px solid rgba(244,196,208,.2);backdrop-filter:blur(10px)}
-.music strong{display:block;font-family:"Cormorant Garamond",serif;font-size:18px;color:#f4c4d0}.music small{display:block;color:#aaa;margin-bottom:8px}.music audio{width:100%}
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.open{display:flex}
-.lightbox img{max-width:95vw;max-height:88vh;object-fit:contain;border-radius:10px}.close{position:absolute;top:20px;right:25px;font-size:35px;cursor:pointer;color:white}
-.nav{position:absolute;top:50%;transform:translateY(-50%);border:none;background:rgba(255,255,255,.12);font-size:28px;padding:15px 20px;margin:0}.prev{left:15px}.next{right:15px}.counter{position:absolute;bottom:25px;color:#ddd}
-@media(max-width:600px){.hero{background-attachment:scroll}section{padding:70px 18px}.gallery{grid-template-columns:repeat(2,1fr);gap:10px}.card img{height:250px}.intro h2,.gallery-title{font-size:40px}.nav{padding:10px 14px}}
+.music strong{display:block;font-family:"Cormorant Garamond",serif;font-size:18px;color:#f4c4d0}
+.music small{display:block;color:#aaa;margin-bottom:8px}
+.music audio{width:100%}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95vw;max-height:88vh;object-fit:contain;border-radius:10px}
+.close{position:absolute;top:20px;right:25px;font-size:35px;cursor:pointer;color:white}
+.nav{position:absolute;top:50%;transform:translateY(-50%);border:none;background:rgba(255,255,255,.12);font-size:28px;padding:15px 20px;margin:0}
+.prev{left:15px}.next{right:15px}
+.counter{position:absolute;bottom:25px;color:#ddd}
+@media(max-width:600px){
+ .hero{background-attachment:scroll}
+ section{padding:70px 18px}
+ .gallery{grid-template-columns:repeat(2,1fr);gap:10px}
+ .card img{height:250px}
+ .intro h2,.gallery-title{font-size:40px}
+ .nav{padding:10px 14px}
+}
 </style>
 </head>
+
 <body>
-<header class="hero"><div class="content">
+
+<header class="hero">
+<div class="content">
 <div class="kicker">Un recuerdo para guardar para siempre</div>
-<h1>Recuerdos de nuestra aventura</h1><div class="subtitle">con las alpacas 🦙</div>
-<div class="love">Te quiero 💗</div><button id="start">Abrir nuestros recuerdos</button>
-</div></header>
+<h1>Recuerdos de nuestra aventura</h1>
+<div class="subtitle">con las alpacas 🦙</div>
+<div class="love">Te quiero 💗</div>
+<div class="date">Desde el 28 de junio de 2026</div>
+<div class="time-together" id="timeTogether">0 días, 0 horas, 0 minutos y 0 segundos</div>
+<button id="start">Abrir nuestros recuerdos</button>
+</div>
+</header>
 
-<section class="intro" id="recuerdos"><h2>Nuestra aventura</h2>
-<p>Hay días que se convierten en recuerdos para siempre. Este es uno de ellos: nuestra aventura, nuestras risas, las alpacas y, por supuesto, nuestro Federico. 🦙💗</p></section>
+<section class="intro" id="recuerdos">
+<h2>Nuestra aventura</h2>
+<p>Hay días que se convierten en recuerdos para siempre. Este es uno de ellos: nuestra aventura, nuestras risas, las alpacas y, por supuesto, nuestro Federico. 🦙💗</p>
+</section>
 
-<section><div class="gallery-title">Nuestros recuerdos</div><div class="gallery" id="gallery"></div></section>
+<section>
+<div class="gallery-title">Nuestros recuerdos</div>
+<div class="gallery" id="gallery"></div>
+</section>
 
-<section class="final"><div class="heart">♡</div><p>Recuerdos de nuestra aventura con las alpacas<br>y de nuestro Federico.<br><br>Te quiero 💗</p></section>
+<section class="final">
+<div class="heart">♡</div>
+<p>Recuerdos de nuestra aventura con las alpacas<br>y de nuestro Federico.<br><br>Te quiero 💗</p>
+</section>
 
-<div class="music"><strong>La canción que te debía</strong><small>Reproduciendo...</small>
-<audio id="audio" controls loop><source src="Morcheeba - Big calm [jsWkPsVpe0Y].mp3" type="audio/mpeg"></audio></div>
+<div class="music">
+<strong>La canción que te debía</strong>
+<small>Morcheeba — Big Calm</small>
+<audio id="audio" controls loop>
+<source src="Morcheeba - Big calm [jsWkPsVpe0Y].mp3" type="audio/mpeg">
+Tu navegador no puede reproducir este audio.
+</audio>
+</div>
 
-<div class="lightbox" id="lightbox"><span class="close" id="close">×</span>
-<button class="nav prev" id="prev">‹</button><img id="big" src="" alt="Nuestro recuerdo">
-<button class="nav next" id="next">›</button><div class="counter" id="counter"></div></div>
+<div class="lightbox" id="lightbox">
+<span class="close" id="close">×</span>
+<button class="nav prev" id="prev">‹</button>
+<img id="big" src="" alt="Nuestro recuerdo">
+<button class="nav next" id="next">›</button>
+<div class="counter" id="counter"></div>
+</div>
 
 <script>
-const fotos=["Foto1.jpg","Foto2.jpg","Foto3.jpg","Foto4.jpg","Foto5.jpg","Foto6.jpg","Foto7.jpg","Foto8.jpg","Foto9.jpg","Foto10.jpg","Foto11.jpg","Foto13.jpg"];
-const gallery=document.getElementById("gallery"),lightbox=document.getElementById("lightbox"),big=document.getElementById("big"),counter=document.getElementById("counter");
+const fotos=[
+"Foto1.jpg",
+"Foto2.jpg",
+"Foto3.jpg",
+"Foto4.jpg",
+"Foto5.jpg",
+"Foto6.jpg",
+"Foto7.jpg",
+"Foto8.jpg",
+"Foto9.jpg",
+"Foto10.jpg",
+"Foto11.jpg",
+"Foto13.jpg"
+];
+
+const gallery=document.getElementById("gallery");
+const lightbox=document.getElementById("lightbox");
+const big=document.getElementById("big");
+const counter=document.getElementById("counter");
 let actual=0;
-fotos.forEach((nombre,i)=>{const card=document.createElement("div");card.className="card";const img=document.createElement("img");img.src="Alpacas/"+nombre;img.alt="Nuestro recuerdo "+(i+1);img.loading="lazy";card.appendChild(img);card.onclick=()=>abrir(i);gallery.appendChild(card);});
-function abrir(i){actual=i;big.src="Alpacas/"+fotos[actual];counter.textContent=(actual+1)+" / "+fotos.length;lightbox.classList.add("open")}
+
+fotos.forEach((nombre,i)=>{
+ const card=document.createElement("div");
+ card.className="card";
+ const img=document.createElement("img");
+ img.src="Alpacas/"+nombre;
+ img.alt="Nuestro recuerdo "+(i+1);
+ img.loading="lazy";
+ card.appendChild(img);
+ card.onclick=()=>abrir(i);
+ gallery.appendChild(card);
+});
+
+function abrir(i){
+ actual=i;
+ big.src="Alpacas/"+fotos[actual];
+ counter.textContent=(actual+1)+" / "+fotos.length;
+ lightbox.classList.add("open");
+}
 function cerrar(){lightbox.classList.remove("open")}
 function siguiente(){abrir((actual+1)%fotos.length)}
 function anterior(){abrir((actual-1+fotos.length)%fotos.length)}
-document.getElementById("close").onclick=cerrar;document.getElementById("next").onclick=siguiente;document.getElementById("prev").onclick=anterior;
+
+document.getElementById("close").onclick=cerrar;
+document.getElementById("next").onclick=siguiente;
+document.getElementById("prev").onclick=anterior;
+
 lightbox.onclick=e=>{if(e.target===lightbox)cerrar()};
-document.onkeydown=e=>{if(!lightbox.classList.contains("open"))return;if(e.key==="Escape")cerrar();if(e.key==="ArrowRight")siguiente();if(e.key==="ArrowLeft")anterior()};
-document.getElementById("start").onclick=()=>{document.getElementById("recuerdos").scrollIntoView({behavior:"smooth"});document.getElementById("audio").play().catch(()=>{})};
+
+document.onkeydown=e=>{
+ if(!lightbox.classList.contains("open"))return;
+ if(e.key==="Escape")cerrar();
+ if(e.key==="ArrowRight")siguiente();
+ if(e.key==="ArrowLeft")anterior();
+};
+
+let startX=0;
+big.addEventListener("touchstart",e=>{startX=e.changedTouches[0].screenX},{passive:true});
+big.addEventListener("touchend",e=>{
+ const dx=e.changedTouches[0].screenX-startX;
+ if(Math.abs(dx)>50)dx<0?siguiente():anterior();
+},{passive:true});
+
+const fechaInicio=new Date("2026-06-28T00:00:00");
+
+function actualizarContador(){
+ let d=new Date()-fechaInicio;
+ const dias=Math.floor(d/86400000); d%=86400000;
+ const horas=Math.floor(d/3600000); d%=3600000;
+ const minutos=Math.floor(d/60000); d%=60000;
+ const segundos=Math.floor(d/1000);
+ document.getElementById("timeTogether").textContent=
+ `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+}
+actualizarContador();
+setInterval(actualizarContador,1000);
+
+document.getElementById("start").onclick=()=>{
+ document.getElementById("recuerdos").scrollIntoView({behavior:"smooth"});
+ document.getElementById("audio").play().catch(()=>{});
+};
 </script>
+
 </body>
 </html>
