@@ -51,7 +51,7 @@ section{max-width:1100px;margin:auto;padding:90px 24px}.intro{text-align:center}
 <button class="nav next" id="next">›</button><div class="counter" id="counter"></div></div>
 
 <script>
-const fotos=["Foto1.jpg","Foto2.jpg","Foto3.jpg","Foto4.jpg","Foto5.jpg","Foto6.jpg","Foto7.jpg","Foto8.jpg","Foto9.jpg","Foto10.jpg","Foto11.jpg","Foto12.jpg","Foto13.jpg"];
+const fotos=["Foto1.jpg","Foto2.jpg","Foto3.jpg","Foto4.jpg","Foto5.jpg","Foto6.jpg","Foto7.jpg","Foto8.jpg","Foto9.jpg","Foto10.jpg","Foto11.jpg","Foto13.jpg"];
 const gallery=document.getElementById("gallery"),lightbox=document.getElementById("lightbox"),big=document.getElementById("big"),counter=document.getElementById("counter");
 let actual=0;
 fotos.forEach((nombre,i)=>{const card=document.createElement("div");card.className="card";const img=document.createElement("img");img.src="Alpacas/"+nombre;img.alt="Nuestro recuerdo "+(i+1);img.loading="lazy";card.appendChild(img);card.onclick=()=>abrir(i);gallery.appendChild(card);});
