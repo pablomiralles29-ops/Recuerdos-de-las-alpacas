@@ -31,6 +31,13 @@ section{max-width:1100px;margin:auto;padding:90px 24px}
 .card{overflow:hidden;border-radius:18px;background:#24181d;border:1px solid rgba(244,196,208,.15);cursor:pointer}
 .card img{display:block;width:100%;height:360px;object-fit:cover;transition:.6s}
 .card:hover img{transform:scale(1.04)}
+
+.video-intro{text-align:center;color:#aaa;max-width:650px;margin:-4px auto 28px;line-height:1.7}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.video-card{overflow:hidden;border-radius:18px;background:#24181d;border:1px solid rgba(244,196,208,.15)}
+.video-card video{display:block;width:100%;height:auto;max-height:520px;background:#080608}
+@media(max-width:700px){.video-grid{grid-template-columns:1fr}.video-card video{max-height:70vh}}
+
 .final{text-align:center;padding-bottom:120px}
 .final p{font-family:"Cormorant Garamond",serif;font-size:34px;color:#f4c4d0}
 .heart{font-size:45px}
@@ -84,6 +91,24 @@ section{max-width:1100px;margin:auto;padding:90px 24px}
 </section>
 
 
+
+
+<section class="videos">
+  <div class="gallery-title">Unos recuerdos en movimiento</div>
+  <p class="video-intro">Porque hay momentos que merece la pena guardar tal y como ocurrieron. ❤️</p>
+  <div class="video-grid">
+    <div class="video-card">
+      <video controls playsinline preload="metadata">
+        <source src="IMG_3917.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-card">
+      <video controls playsinline preload="metadata">
+        <source src="IMG_3921.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
 
 <section class="final">
 <div class="heart">♡</div>
