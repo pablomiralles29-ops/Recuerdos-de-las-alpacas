@@ -17,16 +17,26 @@ h1{font-family:"Cormorant Garamond",serif;font-size:clamp(50px,10vw,100px);line-
 .love{font-family:"Cormorant Garamond",serif;font-size:42px;color:#f4a9bd;margin-top:35px}
 .date{margin-top:16px;font-size:14px;letter-spacing:1px;color:rgba(255,255,255,.78)}
 .time-together{margin-top:7px;font-size:13px;color:rgba(255,255,255,.58)}
+.together-label{margin-top:22px;font-family:"Cormorant Garamond",serif;font-size:22px;color:#f4c4d0}
+.forever{margin-top:8px;font-family:"Cormorant Garamond",serif;font-size:20px;color:rgba(255,255,255,.72);font-style:italic}
+
 button{border:1px solid rgba(255,255,255,.45);background:rgba(244,169,189,.18);color:white;padding:14px 28px;border-radius:40px;font:inherit;cursor:pointer;backdrop-filter:blur(8px);transition:.3s;margin-top:25px}
 button:hover{background:rgba(244,169,189,.35);transform:translateY(-2px)}
 section{max-width:1100px;margin:auto;padding:90px 24px}
 .intro{text-align:center}
 .intro h2,.gallery-title{font-family:"Cormorant Garamond",serif;font-size:48px;font-weight:500;color:#f4c4d0;margin:0 0 15px}
 .intro p{max-width:650px;margin:auto;line-height:1.9;color:#ddd}
+.adventure-date{font-family:"Cormorant Garamond",serif;font-size:24px;color:#f4a9bd;margin:-4px 0 18px}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:45px}
 .card{overflow:hidden;border-radius:18px;background:#24181d;border:1px solid rgba(244,196,208,.15);cursor:pointer}
 .card img{display:block;width:100%;height:360px;object-fit:cover;transition:.6s}
 .card:hover img{transform:scale(1.04)}
+.surprise{text-align:center;padding:110px 24px 90px;max-width:900px}
+.surprise-inner{padding:55px 25px;border:1px solid rgba(244,196,208,.18);border-radius:28px;background:linear-gradient(145deg,rgba(244,169,189,.08),rgba(255,255,255,.025));box-shadow:0 20px 70px rgba(0,0,0,.22)}
+.surprise-small{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.surprise h2{font-family:"Cormorant Garamond",serif;font-size:clamp(38px,6vw,62px);font-weight:500;line-height:1.05;color:#f4c4d0;margin:22px auto 12px;max-width:700px}
+.surprise-heart{font-size:38px;margin:20px 0 10px}
+.surprise p{font-family:"Cormorant Garamond",serif;font-size:25px;color:rgba(255,255,255,.75);margin:0}
 .final{text-align:center;padding-bottom:120px}
 .final p{font-family:"Cormorant Garamond",serif;font-size:34px;color:#f4c4d0}
 .heart{font-size:45px}
@@ -57,23 +67,35 @@ section{max-width:1100px;margin:auto;padding:90px 24px}
 <header class="hero">
 <div class="content">
 <div class="kicker">Un recuerdo para guardar para siempre</div>
-<h1>Recuerdos de nuestra aventura</h1>
+<h1>Un recuerdo de nuestra primera aventura</h1>
 <div class="subtitle">con las alpacas 🦙</div>
 <div class="love">Te quiero 💗</div>
-<div class="date">28/06/2026</div>
+<div class="date">Desde el 27 de junio de 2026</div>
+<div class="together-label">Llevamos juntos</div>
 <div class="time-together" id="timeTogether">0 días, 0 horas, 0 minutos y 0 segundos</div>
+<div class="forever">y esto no ha hecho más que empezar. ❤️</div>
 <button id="start">Abrir nuestros recuerdos</button>
 </div>
 </header>
 
 <section class="intro" id="recuerdos">
-<h2>Nuestra aventura</h2>
-<p>Hay días que se convierten en recuerdos para siempre. Este es uno de ellos: nuestra aventura, nuestras risas, las alpacas y, por supuesto, nuestro Federico. 🦙💗</p>
+<h2>Nuestra primera aventura</h2>
+<div class="adventure-date">28 de junio de 2026</div>
+<p>Un día después de empezar nuestra historia, vivimos nuestra primera aventura juntos: nuestras risas, las alpacas y, por supuesto, nuestro Federico. 🦙💗</p>
 </section>
 
 <section>
 <div class="gallery-title">Nuestros recuerdos</div>
 <div class="gallery" id="gallery"></div>
+</section>
+
+<section class="surprise" id="surprise">
+<div class="surprise-inner">
+<div class="surprise-small">Y ahora una pregunta...</div>
+<h2>¿Preparada para nuestra próxima aventura?</h2>
+<div class="surprise-heart">❤️</div>
+<p>Porque esto es solo el principio.</p>
+</div>
 </section>
 
 <section class="final">
@@ -162,7 +184,7 @@ big.addEventListener("touchend",e=>{
  if(Math.abs(dx)>50)dx<0?siguiente():anterior();
 },{passive:true});
 
-const fechaInicio=new Date("2026-06-28T00:00:00");
+const fechaInicio=new Date("2026-06-27T00:00:00");
 
 function actualizarContador(){
  let d=new Date()-fechaInicio;
