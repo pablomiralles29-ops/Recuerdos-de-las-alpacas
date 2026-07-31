@@ -3,79 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recuerdos de nuestra aventura 🩷</title>
+<title>Recuerdos de nuestra aventura 💗</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:#120d10;color:#fff;font-family:Montserrat,sans-serif;font-weight:300}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;position:relative;overflow:hidden;background:linear-gradient(rgba(10,7,9,.3),rgba(10,7,9,.88)),url('fotos/foto1.jpg') center/cover fixed}
-.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,transparent 0,rgba(0,0,0,.28) 55%,rgba(0,0,0,.72) 100%)}
-.content{position:relative;z-index:2;max-width:900px}.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;opacity:.8;margin-bottom:20px}
-h1{font-family:"Cormorant Garamond",serif;font-size:clamp(55px,10vw,110px);font-weight:500;line-height:.85;margin:0 0 25px;color:#f4c4d0}
-.subtitle{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,4vw,42px);line-height:1.15}.love{font-family:"Cormorant Garamond",serif;font-size:42px;color:#f4a9bd;margin-top:35px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;position:relative;overflow:hidden;background:linear-gradient(rgba(10,7,9,.30),rgba(10,7,9,.88)),url("Alpacas/Foto1.jpg") center/cover fixed}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,transparent 0,rgba(0,0,0,.72) 100%)}
+.content{position:relative;z-index:2;max-width:900px}
+.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;opacity:.8;margin-bottom:20px}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(50px,10vw,100px);line-height:.9;font-weight:500;margin:0 0 20px}
+.subtitle{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,4vw,42px);line-height:1.15}
+.love{font-family:"Cormorant Garamond",serif;font-size:42px;color:#f4a9bd;margin-top:35px}
+.date{margin-top:16px;font-size:14px;letter-spacing:1px;color:rgba(255,255,255,.78)}
+.time-together{margin-top:7px;font-size:13px;color:rgba(255,255,255,.58)}
+.together-label{margin-top:22px;font-family:"Cormorant Garamond",serif;font-size:22px;color:#f4c4d0}
+.forever{margin-top:8px;font-family:"Cormorant Garamond",serif;font-size:20px;color:rgba(255,255,255,.72);font-style:italic}
+
 button{border:1px solid rgba(255,255,255,.45);background:rgba(244,169,189,.18);color:white;padding:14px 28px;border-radius:40px;font:inherit;cursor:pointer;backdrop-filter:blur(8px);transition:.3s;margin-top:25px}
 button:hover{background:rgba(244,169,189,.35);transform:translateY(-2px)}
-section{max-width:1100px;margin:auto;padding:90px 24px}.intro{text-align:center}
+section{max-width:1100px;margin:auto;padding:90px 24px}
+.intro{text-align:center}
 .intro h2,.gallery-title{font-family:"Cormorant Garamond",serif;font-size:48px;font-weight:500;color:#f4c4d0;margin:0 0 15px}
 .intro p{max-width:650px;margin:auto;line-height:1.9;color:#ddd}
-.gallery{columns:3 260px;column-gap:18px;margin-top:45px}.card{break-inside:avoid;margin:0 0 18px;overflow:hidden;border-radius:18px;background:#24181d;border:1px solid rgba(244,196,208,.15);cursor:pointer;position:relative}
-.card img{display:block;width:100%;height:auto;transition:transform .7s}.card:hover img{transform:scale(1.035)}
-.card:after{content:"♡";position:absolute;right:14px;bottom:10px;font-size:22px;color:rgba(255,255,255,.75);opacity:0;transition:.3s}.card:hover:after{opacity:1}
-.hint{text-align:center;color:#aaa;font-size:12px;letter-spacing:1px;margin-top:18px}.final{text-align:center;padding-bottom:120px}
-.final p{font-family:"Cormorant Garamond",serif;font-size:34px;color:#f4c4d0}.heart{font-size:45px}
-.music{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:20;width:min(92%,520px);padding:12px 16px;border-radius:18px;background:rgba(30,20,25,.88);border:1px solid rgba(244,196,208,.2);backdrop-filter:blur(12px);display:flex;align-items:center;gap:12px}
-.music .disc{width:38px;height:38px;border-radius:50%;background:#f4a9bd;display:grid;place-items:center;color:#24151a;flex:0 0 auto}.music small{display:block;color:#aaa;margin-top:2px}.music audio{width:145px;margin-left:auto}
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.open{display:flex}
-.lightbox img{max-width:88vw;max-height:88vh;object-fit:contain;border-radius:12px}.close{position:absolute;top:15px;right:25px;font-size:38px;color:white;cursor:pointer}
-.nav{position:absolute;top:50%;transform:translateY(-50%);border:0;background:rgba(255,255,255,.1);margin:0;width:52px;height:52px;padding:0;font-size:30px;border-radius:50%;backdrop-filter:blur(8px)}
-.nav:hover{background:rgba(255,255,255,.22);transform:translateY(-50%)}.prev{left:18px}.next{right:18px}.counter{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:12px;color:#bbb;letter-spacing:2px}
-@media(max-width:650px){.hero{background-attachment:scroll}.gallery{columns:2 145px;column-gap:10px}.card{margin-bottom:10px;border-radius:12px}.music audio{width:105px}.music{bottom:10px}.intro h2,.gallery-title{font-size:40px}.nav{width:44px;height:44px;font-size:25px}.prev{left:8px}.next{right:8px}}
-
-#introOverlay{position:fixed;inset:0;background:#090709;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity 1s}
-#introOverlay.fade{opacity:0;pointer-events:none}
-#introCanvas{position:absolute;inset:0;width:100%;height:100%}
-#introText{position:relative;font-family:"Cormorant Garamond",serif;font-size:clamp(28px,4vw,52px);color:#ffd4df;opacity:0;transition:opacity 1s;z-index:2;text-align:center;padding:20px}
+.adventure-date{font-family:"Cormorant Garamond",serif;font-size:24px;color:#f4a9bd;margin:-4px 0 18px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:45px}
+.card{overflow:hidden;border-radius:18px;background:#24181d;border:1px solid rgba(244,196,208,.15);cursor:pointer}
+.card img{display:block;width:100%;height:360px;object-fit:cover;transition:.6s}
+.card:hover img{transform:scale(1.04)}
+.final{text-align:center;padding-bottom:120px}
+.final p{font-family:"Cormorant Garamond",serif;font-size:34px;color:#f4c4d0}
+.heart{font-size:45px}
+.music{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:20;width:min(92%,520px);padding:12px 16px;border-radius:18px;background:rgba(20,15,18,.90);border:1px solid rgba(244,196,208,.2);backdrop-filter:blur(10px)}
+.music strong{display:block;font-family:"Cormorant Garamond",serif;font-size:18px;color:#f4c4d0}
+.music small{display:block;color:#aaa;margin-bottom:8px}
+.music audio{width:100%}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95vw;max-height:88vh;object-fit:contain;border-radius:10px}
+.close{position:absolute;top:20px;right:25px;font-size:35px;cursor:pointer;color:white}
+.nav{position:absolute;top:50%;transform:translateY(-50%);border:none;background:rgba(255,255,255,.12);font-size:28px;padding:15px 20px;margin:0}
+.prev{left:15px}.next{right:15px}
+.counter{position:absolute;bottom:25px;color:#ddd}
+@media(max-width:600px){
+ .hero{background-attachment:scroll}
+ section{padding:70px 18px}
+ .gallery{grid-template-columns:repeat(2,1fr);gap:10px}
+ .card img{height:250px}
+ .intro h2,.gallery-title{font-size:40px}
+ .nav{padding:10px 14px}
+}
 </style>
 </head>
-<body>
-<div id="introOverlay"><canvas id="introCanvas"></canvas><div id="introText">Para la persona que hace que todos mis recuerdos sean más bonitos. 💗</div></div>
 
-<header class="hero"><div class="content">
-<div class="kicker">Un recuerdo para nosotros</div><h1>Recuerdos</h1>
-<div class="subtitle">de nuestra aventura con las alpacas<br>y de nuestro Federico.</div><div class="love">Te quiero 💗</div>
-<button id="start">Abrir nuestros recuerdos ♥</button></div></header>
-<section class="intro"><h2>Pequeños momentos, grandes recuerdos.</h2>
-<p>Hay días que se convierten en recuerdos para siempre. Este es uno de ellos: nuestra aventura, nuestras risas, las alpacas y, por supuesto, nuestro Federico. 🦙</p></section>
-<section><div class="gallery-title">Nuestra aventura</div><div class="gallery" id="gallery"></div><div class="hint">Toca una foto para verla en grande ♡</div></section>
-<section class="final"><div class="heart">♡</div><p>Y que este sea solo uno de muchos recuerdos más.</p><div class="love">Te quiero 💗</div></section>
-<div class="music"><div class="disc">♫</div><div><strong>Nuestra canción</strong><small>Reproduciendo...</small></div><audio id="audio" controls loop><source src="musica.mp3" type="audio/mpeg"></audio></div>
-<div class="lightbox" id="lightbox"><span class="close" id="close">&times;</span><button class="nav prev" id="prev">‹</button><img id="big"><button class="nav next" id="next">›</button><div class="counter" id="counter"></div></div>
+<body>
+
+<header class="hero">
+<div class="content">
+<div class="kicker">Un recuerdo para guardar para siempre</div>
+<h1>Un recuerdo de nuestra aventura</h1>
+<div class="subtitle">con las alpacas 🦙</div>
+<div class="love">Te quiero 💗</div>
+<div class="date">Desde el 27 de junio de 2026</div>
+<div class="together-label">Llevamos juntos</div>
+<div class="time-together" id="timeTogether">0 días, 0 horas, 0 minutos y 0 segundos</div>
+<div class="forever">y esto no ha hecho más que empezar. ❤️</div>
+<button id="start">Abrir nuestros recuerdos</button>
+</div>
+</header>
+
+<section class="intro" id="recuerdos">
+<h2>Nuestra aventura con las alpacas</h2>
+<div class="adventure-date">28 de junio de 2026</div>
+<p>Un día después de empezar nuestra historia como pareja, vivimos otro de esos momentos que quiero guardar para siempre: nuestras risas, las alpacas y, por supuesto, nuestro Federico. 🦙💗</p>
+</section>
+
+<section>
+<div class="gallery-title">Nuestros recuerdos</div>
+<div class="gallery" id="gallery"></div>
+</section>
+
+
+
+<section class="final">
+<div class="heart">♡</div>
+<p>Recuerdos de nuestra aventura con las alpacas<br>y de nuestro Federico.<br><br>Te quiero 💗</p>
+</section>
+
+<div class="music">
+<strong>La canción que te debía</strong>
+<small>Morcheeba — Big Calm</small>
+<audio id="audio" controls loop>
+<source src="Morcheeba - Big calm [jsWkPsVpe0Y].mp3" type="audio/mpeg">
+Tu navegador no puede reproducir este audio.
+</audio>
+</div>
+
+<div class="lightbox" id="lightbox">
+<span class="close" id="close">×</span>
+<button class="nav prev" id="prev">‹</button>
+<img id="big" src="" alt="Nuestro recuerdo">
+<button class="nav next" id="next">›</button>
+<div class="counter" id="counter"></div>
+</div>
+
 <script>
 const fotos=[
-"foto1.jpg","foto2.jpg","foto3.jpg","foto4.jpg","foto5.jpg",
-"61e187b2-5a6d-4b85-ac3a-cb7e97b891ee.jpg",
-/* Añade aquí nuevos nombres: "foto7.jpg", */
+"Foto1.jpg",
+"Foto2.jpg",
+"Foto3.jpg",
+"Foto4.jpg",
+"Foto5.jpg",
+"Foto6.jpg",
+"Foto7.jpg",
+"Foto8.jpg",
+"Foto9.jpg",
+"Foto10.jpg",
+"Foto11.jpg",
+"Foto13.jpg"
 ];
-const gallery=document.getElementById("gallery"),lightbox=document.getElementById("lightbox"),big=document.getElementById("big"),counter=document.getElementById("counter");let actual=0;
-fotos.forEach((nombre,i)=>{const card=document.createElement("div");card.className="card";const img=document.createElement("img");img.src="fotos/"+nombre;img.alt="Nuestro recuerdo "+(i+1);img.loading="lazy";card.appendChild(img);card.onclick=()=>abrir(i);gallery.appendChild(card)});
-function abrir(i){actual=i;big.src="fotos/"+fotos[actual];counter.textContent=(actual+1)+" / "+fotos.length;lightbox.classList.add("open")}
-function cerrar(){lightbox.classList.remove("open")}function siguiente(){abrir((actual+1)%fotos.length)}function anterior(){abrir((actual-1+fotos.length)%fotos.length)}
-document.getElementById("close").onclick=cerrar;document.getElementById("next").onclick=siguiente;document.getElementById("prev").onclick=anterior;
-lightbox.onclick=e=>{if(e.target===lightbox)cerrar()};document.onkeydown=e=>{if(!lightbox.classList.contains("open"))return;if(e.key==="Escape")cerrar();if(e.key==="ArrowRight")siguiente();if(e.key==="ArrowLeft")anterior()};
-let sx=0;big.ontouchstart=e=>sx=e.changedTouches[0].screenX;big.ontouchend=e=>{let dx=e.changedTouches[0].screenX-sx;if(Math.abs(dx)>50)dx<0?siguiente():anterior()};
-const audio=document.getElementById("audio");document.getElementById("start").onclick=()=>{audio.play().catch(()=>{});document.querySelector(".intro").scrollIntoView({behavior:"smooth"})};
-</script>
-<script>
-(()=>{const o=document.getElementById('introOverlay'),c=document.getElementById('introCanvas'),t=document.getElementById('introText');
-const x=c.getContext('2d');function rs(){c.width=innerWidth;c.height=innerHeight}rs();addEventListener('resize',rs);
-const pts=[];const N=900;
-function heart(a){let X=16*Math.pow(Math.sin(a),3),Y=13*Math.cos(a)-5*Math.cos(2*a)-2*Math.cos(3*a)-Math.cos(4*a);return {x:X,y:-Y};}
-for(let i=0;i<N;i++){let a=Math.random()*Math.PI*2,h=heart(a);pts.push({tx:c.width/2+h.x*14,ty:c.height/2+h.y*14,x:Math.random()*c.width,y:Math.random()*c.height});}
-let st=performance.now();
-function f(tm){let e=(tm-st)/1000;x.clearRect(0,0,c.width,c.height);let p=Math.min(e/2,1);pts.forEach(q=>{q.x+=(q.tx-q.x)*0.04;q.y+=(q.ty-q.y)*0.04;x.fillStyle='rgba(244,169,189,.85)';x.beginPath();x.arc(q.x,q.y,1.5,0,7);x.fill();});
-if(e>2)t.style.opacity=1;
-if(e<5)requestAnimationFrame(f);else{o.classList.add('fade');setTimeout(()=>o.remove(),1000);}
+
+const gallery=document.getElementById("gallery");
+const lightbox=document.getElementById("lightbox");
+const big=document.getElementById("big");
+const counter=document.getElementById("counter");
+let actual=0;
+
+fotos.forEach((nombre,i)=>{
+ const card=document.createElement("div");
+ card.className="card";
+ const img=document.createElement("img");
+ img.src="Alpacas/"+nombre;
+ img.alt="Nuestro recuerdo "+(i+1);
+ img.loading="lazy";
+ card.appendChild(img);
+ card.onclick=()=>abrir(i);
+ gallery.appendChild(card);
+});
+
+function abrir(i){
+ actual=i;
+ big.src="Alpacas/"+fotos[actual];
+ counter.textContent=(actual+1)+" / "+fotos.length;
+ lightbox.classList.add("open");
 }
-requestAnimationFrame(f);})();
+function cerrar(){lightbox.classList.remove("open")}
+function siguiente(){abrir((actual+1)%fotos.length)}
+function anterior(){abrir((actual-1+fotos.length)%fotos.length)}
+
+document.getElementById("close").onclick=cerrar;
+document.getElementById("next").onclick=siguiente;
+document.getElementById("prev").onclick=anterior;
+
+lightbox.onclick=e=>{if(e.target===lightbox)cerrar()};
+
+document.onkeydown=e=>{
+ if(!lightbox.classList.contains("open"))return;
+ if(e.key==="Escape")cerrar();
+ if(e.key==="ArrowRight")siguiente();
+ if(e.key==="ArrowLeft")anterior();
+};
+
+let startX=0;
+big.addEventListener("touchstart",e=>{startX=e.changedTouches[0].screenX},{passive:true});
+big.addEventListener("touchend",e=>{
+ const dx=e.changedTouches[0].screenX-startX;
+ if(Math.abs(dx)>50)dx<0?siguiente():anterior();
+},{passive:true});
+
+const fechaInicio=new Date("2026-06-27T00:00:00");
+
+function actualizarContador(){
+ let d=new Date()-fechaInicio;
+ const dias=Math.floor(d/86400000); d%=86400000;
+ const horas=Math.floor(d/3600000); d%=3600000;
+ const minutos=Math.floor(d/60000); d%=60000;
+ const segundos=Math.floor(d/1000);
+ document.getElementById("timeTogether").textContent=
+ `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+}
+actualizarContador();
+setInterval(actualizarContador,1000);
+
+document.getElementById("start").onclick=()=>{
+ document.getElementById("recuerdos").scrollIntoView({behavior:"smooth"});
+ document.getElementById("audio").play().catch(()=>{});
+};
 </script>
-</body></html>
+
+</body>
+</html>
